@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Corn Studios</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,58 +17,81 @@
     <a href="#" class="nav-logo">CORN_STUDIOS</a>
     <ul class="nav-links">
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="builds.html">Builds</a></li>
+      <li><a href="builds.html">Corn Builds</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- ── HERO ── -->
   <section class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <p class="hero-eyebrow">// Open Source Software Studio</p>
-    <h1 class="hero-title">
-      <span>CORN</span>
-      <span class="outline">STUDIOS</span>
-    </h1>
-    <p class="hero-desc">
-      Building free, open source tools that make Windows better and workflows faster.
-      Based in New York. Built in the open.
-    </p>
-    <div class="hero-ctas">
-      <a href="https://github.com/Corn-Studios" class="btn btn-primary" target="_blank">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        View on GitHub
-      </a>
-      <a href="#services" class="btn btn-ghost">Hire on Fiverr →</a>
+    <div class="hero-stars" id="heroStars"></div>
+
+    <div class="hero-moon">🌙</div>
+
+    <div class="hero-meteors">
+      <span class="meteor-emoji" style="animation-delay:0s">☄️</span>
+      <span class="meteor-emoji" style="animation-delay:0.4s;font-size:1.6rem">☄️</span>
+      <span class="meteor-emoji" style="animation-delay:0.8s;font-size:2.6rem">☄️</span>
     </div>
+
+    <div class="hero-corn">🌽</div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">// Open Source Software Studio</p>
+      <h1 class="hero-title">
+        <span class="line1">CORN</span>
+        <span class="line2">STUDIOS</span>
+      </h1>
+      <p class="hero-desc">
+        Building free, open source tools that make Windows better and workflows faster.
+        Also home to Corn Builds — custom PC builds and consulting.
+        Based in Dutchess County, NY. Built in the open.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://github.com/Corn-Studios" class="btn btn-primary" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+        <a href="builds.html" class="btn btn-meteor">🌽 Corn Builds →</a>
+        <a href="#services" class="btn btn-ghost">Hire on Fiverr →</a>
+      </div>
+    </div>
+
     <div class="hero-scroll">
       <div class="scroll-line"></div>
       Scroll to explore
     </div>
   </section>
 
+  <!-- ── TICKER ── -->
   <div class="ticker-wrap">
     <div class="ticker">
-      <span class="ticker-item"><span>✦</span> Open Source</span>
-      <span class="ticker-item"><span>✦</span> C# / .NET 8</span>
-      <span class="ticker-item"><span>✦</span> Windows Tools</span>
-      <span class="ticker-item"><span>✦</span> Free Forever</span>
-      <span class="ticker-item"><span>✦</span> Dutchess County NY</span>
-      <span class="ticker-item"><span>✦</span> Freelance Dev</span>
-      <span class="ticker-item"><span>✦</span> WinForms</span>
-      <span class="ticker-item"><span>✦</span> Community Supported</span>
-      <span class="ticker-item"><span>✦</span> Open Source</span>
-      <span class="ticker-item"><span>✦</span> C# / .NET 8</span>
-      <span class="ticker-item"><span>✦</span> Windows Tools</span>
-      <span class="ticker-item"><span>✦</span> Free Forever</span>
-      <span class="ticker-item"><span>✦</span> Dutchess County NY</span>
-      <span class="ticker-item"><span>✦</span> Freelance Dev</span>
-      <span class="ticker-item"><span>✦</span> WinForms</span>
-      <span class="ticker-item"><span>✦</span> Community Supported</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Open Source</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> C# / .NET 8</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Windows Tools</span>
+      <span class="ticker-item"><span class="t-meteor">☄️</span> Custom PC Builds</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Dutchess County NY</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Free Forever</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> WinForms</span>
+      <span class="ticker-item"><span class="t-meteor">🌽</span> Corn Builds</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> PC Consulting</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Community Supported</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item"><span class="t-icon">✦</span> Open Source</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> C# / .NET 8</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Windows Tools</span>
+      <span class="ticker-item"><span class="t-meteor">☄️</span> Custom PC Builds</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Dutchess County NY</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Free Forever</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> WinForms</span>
+      <span class="ticker-item"><span class="t-meteor">🌽</span> Corn Builds</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> PC Consulting</span>
+      <span class="ticker-item"><span class="t-icon">✦</span> Community Supported</span>
     </div>
   </div>
 
+  <!-- ── PROJECTS ── -->
   <section id="projects">
     <p class="section-label reveal">01 — Projects</p>
     <h2 class="section-title reveal">What we've built.</h2>
@@ -112,30 +135,86 @@
     </div>
   </section>
 
+  <!-- ── CORN BUILDS ── -->
+  <section id="corn-builds">
+    <p class="section-label reveal">02 — Corn Builds</p>
+    <div class="builds-intro">
+      <h2 class="section-title reveal">Custom PCs.<br>Real expertise.</h2>
+      <span class="builds-badge reveal">NEW</span>
+    </div>
+    <p class="reveal" style="color:var(--text-dim);max-width:560px;line-height:1.75;margin-top:0.5rem;font-size:0.95rem;">
+      Corn Builds is the hardware arm of Corn Studios. Whether you need a machine spec'd for your budget, a full custom build, or an upgrade paired with our own optimization tools — we've got you in Dutchess County and beyond.
+    </p>
+    <div class="builds-grid">
+      <div class="build-tier reveal">
+        <span class="tier-icon">📋</span>
+        <p class="tier-name">TIER_01</p>
+        <h3 class="tier-label">Spec & Advise</h3>
+        <p class="tier-desc">Remote service. Tell us your budget and use case — gaming, creative work, productivity — and we'll return a full parts list with reasoning you'll actually understand.</p>
+        <ul class="tier-perks">
+          <li>Budget-optimized parts list</li>
+          <li>Full written reasoning per part</li>
+          <li>PCPartPicker link included</li>
+          <li>Follow-up questions welcome</li>
+        </ul>
+      </div>
+      <div class="build-tier featured reveal">
+        <span class="tier-icon">🖥️</span>
+        <p class="tier-name">TIER_02</p>
+        <h3 class="tier-label">Full Custom Build</h3>
+        <p class="tier-desc">Local service — Dutchess County, NY. You set the budget and goals, we source, assemble, and configure the whole machine from scratch.</p>
+        <ul class="tier-perks">
+          <li>Parts sourcing & assembly</li>
+          <li>Windows install & driver setup</li>
+          <li>Win11 Optimizer included free</li>
+          <li>CornDownloader setup included</li>
+          <li>Post-build support</li>
+        </ul>
+      </div>
+      <div class="build-tier reveal">
+        <span class="tier-icon">⚡</span>
+        <p class="tier-name">TIER_03</p>
+        <h3 class="tier-label">Upgrade & Optimize</h3>
+        <p class="tier-desc">Local service. Existing machine getting long in the tooth? We handle the hardware upgrade AND run a full optimization pass so it feels brand new.</p>
+        <ul class="tier-perks">
+          <li>GPU, RAM, or storage upgrade</li>
+          <li>Win11 Optimizer full pass</li>
+          <li>Debloat & performance tuning</li>
+          <li>Before/after benchmarks</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:3rem" class="reveal">
+      <a href="builds.html" class="btn btn-primary">View Corn Builds →</a>
+      <a href="contact.html" class="btn btn-ghost" style="margin-left:1rem">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
   <section id="services">
-    <p class="section-label reveal">02 — Services</p>
+    <p class="section-label reveal">03 — Services</p>
     <h2 class="section-title reveal">Available for hire.</h2>
-    <p class="reveal" style="color:var(--muted);max-width:500px;line-height:1.7;margin-bottom:0.5rem;font-size:0.95rem;">
-      Need custom software, Windows automation, or technical documentation? I'm available for freelance work through Fiverr.
+    <p class="reveal" style="color:var(--text-dim);max-width:500px;line-height:1.75;margin-bottom:0.5rem;font-size:0.95rem;">
+      Need custom software, Windows automation, or technical documentation? Available for freelance work through Fiverr.
     </p>
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-icon">⚙️</div>
+        <span class="service-icon">⚙️</span>
         <h3 class="service-title">Software Development</h3>
         <p class="service-desc">Custom C# / .NET applications, scripts, and Windows utilities built to your spec.</p>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🪟</div>
+        <span class="service-icon">🪟</span>
         <h3 class="service-title">Windows Optimization</h3>
         <p class="service-desc">System tuning, debloating, and performance consulting for Windows 10 & 11.</p>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">📝</div>
+        <span class="service-icon">📝</span>
         <h3 class="service-title">Technical Writing</h3>
         <p class="service-desc">Clear documentation, README files, and guides for software projects.</p>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🔧</div>
+        <span class="service-icon">🔧</span>
         <h3 class="service-title">Tool Automation</h3>
         <p class="service-desc">Automate repetitive tasks and workflows with custom scripting solutions.</p>
       </div>
@@ -145,9 +224,10 @@
     </div>
   </section>
 
+  <!-- ── SUPPORT ── -->
   <section id="support">
     <div class="support-inner">
-      <p class="section-label reveal">03 — Support</p>
+      <p class="section-label reveal">04 — Support</p>
       <h2 class="section-title reveal">Keep it free.</h2>
       <p class="support-desc reveal">
         All Corn Studios software is free and open source, always. If these tools have helped you, consider supporting continued development.
@@ -165,6 +245,7 @@
       <a href="https://github.com/Corn-Studios" target="_blank">GitHub</a>
       <a href="https://instagram.com/cornstudiosdev" target="_blank">Instagram</a>
       <a href="#services">Fiverr</a>
+      <a href="builds.html">Corn Builds</a>
     </div>
     <span class="footer-copy">© 2025 Corn Studios — Dutchess County, NY</span>
   </footer>

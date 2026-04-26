@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Builds — Corn Studios</title>
+  <title>Corn Builds — Corn Studios</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,23 +17,125 @@
     <a href="index.html" class="nav-logo">CORN_STUDIOS</a>
     <ul class="nav-links">
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="builds.html">Builds</a></li>
+      <li><a href="builds.html">Corn Builds</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <section style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding-top:8rem;">
-    <p class="section-label reveal">02 — Builds</p>
-    <h1 class="section-title reveal">Latest releases.</h1>
-    <p class="reveal" style="color:var(--muted); font-size:0.95rem; line-height:1.7; max-width:480px; margin-top:1rem;">
-      This page is coming soon. Download links, release notes, and changelogs for all Corn Studios builds will live here.
-    </p>
-    <div style="margin-top:2.5rem;" class="reveal">
-      <a href="index.html" class="btn btn-ghost">← Back to Home</a>
+  <section class="page-hero">
+    <div class="hero-stars" id="heroStars"></div>
+    <div class="hero-moon" style="top:8%;right:8%;font-size:3rem">🌙</div>
+    <div class="hero-meteors" style="top:6%;right:20%">
+      <span class="meteor-emoji" style="font-size:1.5rem">☄️</span>
+      <span class="meteor-emoji" style="font-size:2rem;animation-delay:0.5s">☄️</span>
     </div>
+    <div style="position:relative;z-index:4;">
+      <p class="section-label reveal" style="margin-bottom:1.5rem;">02 — Corn Builds</p>
+      <h1 class="section-title reveal" style="font-size:clamp(1.6rem,4vw,3rem);margin-bottom:1.2rem;">
+        🌽 Custom PCs.<br>No fluff.
+      </h1>
+      <p class="reveal" style="color:var(--text-dim);font-size:0.98rem;line-height:1.75;max-width:540px;margin-top:1rem;">
+        Corn Builds is the hardware consulting arm of Corn Studios. Local builds in Dutchess County, NY — plus remote spec advice for anyone who wants a parts list they can actually understand.
+      </p>
+      <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;" class="reveal">
+        <a href="contact.html" class="btn btn-primary">Get a Quote →</a>
+        <a href="index.html" class="btn btn-ghost">← Back to Home</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- PLACEHOLDER: Replace this comment with your builds/releases content -->
+  <!-- SERVICES -->
+  <section style="background:var(--bg2);">
+    <p class="section-label reveal">What we offer</p>
+    <h2 class="section-title reveal">Three ways to work with us.</h2>
+    <div class="builds-grid" style="margin-top:3rem;">
+      <div class="build-tier reveal">
+        <span class="tier-icon">📋</span>
+        <p class="tier-name">TIER_01 — REMOTE</p>
+        <h3 class="tier-label">Spec & Advise</h3>
+        <p class="tier-desc">Tell us your budget and what you need the machine for — gaming, video editing, general use, streaming — and we'll come back with a complete parts list and the reasoning behind every choice.</p>
+        <ul class="tier-perks">
+          <li>Budget-optimized parts list</li>
+          <li>Written reasoning per component</li>
+          <li>PCPartPicker link included</li>
+          <li>Follow-up Q&A included</li>
+          <li>Available nationwide (remote)</li>
+        </ul>
+      </div>
+      <div class="build-tier featured reveal">
+        <span class="tier-icon">🖥️</span>
+        <p class="tier-name">TIER_02 — LOCAL</p>
+        <h3 class="tier-label">Full Custom Build</h3>
+        <p class="tier-desc">You set the goals and budget, we handle everything else. Parts sourcing, assembly, OS setup, and a full Win11 Optimizer pass so your machine is clean and fast out of the box.</p>
+        <ul class="tier-perks">
+          <li>Parts sourcing & assembly</li>
+          <li>Windows install & all drivers</li>
+          <li>Win11 Optimizer pass (free)</li>
+          <li>CornDownloader setup (free)</li>
+          <li>Cable management included</li>
+          <li>Post-build support & follow-up</li>
+        </ul>
+      </div>
+      <div class="build-tier reveal">
+        <span class="tier-icon">⚡</span>
+        <p class="tier-name">TIER_03 — LOCAL</p>
+        <h3 class="tier-label">Upgrade & Optimize</h3>
+        <p class="tier-desc">Got an existing machine that's running slow? We upgrade the hardware and run a full optimization pass so it performs like new — no fresh build required.</p>
+        <ul class="tier-perks">
+          <li>GPU, RAM, SSD upgrades</li>
+          <li>Win11 Optimizer full pass</li>
+          <li>Debloat & telemetry removal</li>
+          <li>Before/after benchmarks</li>
+          <li>Dutchess County, NY area</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CORN BUILDS -->
+  <section style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <p class="section-label reveal">Why Corn Builds</p>
+    <h2 class="section-title reveal">The difference is in the details.</h2>
+    <div class="services-grid" style="margin-top:3rem;">
+      <div class="service-card reveal">
+        <span class="service-icon">🧠</span>
+        <h3 class="service-title">We Explain Our Choices</h3>
+        <p class="service-desc">Every spec comes with reasoning. You'll know why we picked each part — not just a list with no context.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🪟</span>
+        <h3 class="service-title">Optimized Out of the Box</h3>
+        <p class="service-desc">Every local build ships with Win11 Optimizer already run. No bloatware, no telemetry, just a clean OS.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">📍</span>
+        <h3 class="service-title">Local & Personal</h3>
+        <p class="service-desc">Based in Dutchess County, NY. You're working with a real person, not a faceless shop or big box store.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">💬</span>
+        <h3 class="service-title">Post-Build Support</h3>
+        <p class="service-desc">Got a question after pickup? We don't disappear. Follow-up support is part of every build.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="text-align:center;background:linear-gradient(160deg,var(--bg2) 0%,#1a1040 50%,var(--bg) 100%);">
+    <div style="max-width:600px;margin:0 auto;">
+      <p class="section-label reveal" style="justify-content:center;">
+        <span style="font-size:1.5rem">🌽</span>
+      </p>
+      <h2 class="section-title reveal">Ready to build?</h2>
+      <p class="reveal" style="color:var(--text-dim);font-size:1rem;line-height:1.75;margin:1.5rem 0 2.5rem;">
+        Reach out through the contact page and tell us what you're looking for. Budget, use case, timeline — whatever you've got. We'll take it from there.
+      </p>
+      <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary">Start a Conversation →</a>
+        <a href="index.html" class="btn btn-ghost">← Back to Home</a>
+      </div>
+    </div>
   </section>
 
   <footer>
