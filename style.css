@@ -838,3 +838,134 @@ footer {
   body { cursor: auto; }
   .cursor, .cursor-ring { display: none; }
 }
+/* ─── PAGE TRANSITION ────────────────────────────────────── */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.page-transition.fade-out {
+  opacity: 1;
+  pointer-events: all;
+}
+body.is-leaving .page-transition {
+  opacity: 1;
+}
+
+/* ─── ACTIVE NAV LINK ────────────────────────────────────── */
+.nav-links a.nav-active {
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* ─── HAMBURGER BUTTON ───────────────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: transparent;
+  border: 1px solid var(--border2);
+  cursor: none;
+  position: fixed;
+  top: 1.2rem; right: 1.5rem;
+  z-index: 200;
+  padding: 0;
+  transition: border-color 0.2s;
+}
+.hamburger:hover { border-color: var(--accent); cursor: pointer; }
+.hamburger span {
+  display: block;
+  width: 18px; height: 1.5px;
+  background: var(--text);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ─── MOBILE NAV OVERLAY ─────────────────────────────────── */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8,8,18,0.97);
+  z-index: 150;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+.mobile-nav-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-nav-overlay a {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s, text-shadow 0.2s;
+  line-height: 2;
+}
+.mobile-nav-overlay a:hover,
+.mobile-nav-overlay a.nav-active {
+  color: var(--accent);
+  text-shadow: 0 0 16px var(--accent-glow);
+}
+.mobile-nav-divider {
+  width: 40px; height: 1px;
+  background: var(--border2);
+}
+
+/* ─── SHOOTING METEOR ────────────────────────────────────── */
+.meteor-trail {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 6;
+  width: 120px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(244,81,30,0.9), rgba(245,200,66,0.6), transparent);
+  box-shadow: 0 0 8px var(--meteor), 0 0 20px var(--meteor-glow);
+  opacity: 0;
+  transform-origin: left center;
+}
+.meteor-trail::after {
+  content: '☄️';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 6px var(--meteor));
+}
+
+@keyframes meteorShoot {
+  0%   { opacity: 0; transform: translate(0,0) rotate(var(--angle)); }
+  5%   { opacity: 1; }
+  85%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(var(--tx), var(--ty)) rotate(var(--angle)); }
+}
+
+/* ─── RESPONSIVE — MOBILE NAV ────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-nav-overlay { display: flex; }
+  .hamburger { cursor: pointer; }
+}

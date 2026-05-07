@@ -6,9 +6,20 @@
   <title>About — Corn Studios</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-page="about">
+  <!-- Page transition overlay -->
+  <div class="page-transition" id="pageTransition"></div>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
@@ -18,7 +29,7 @@
     <ul class="nav-links">
       <li><a href="projects.html">Projects</a></li>
       <li><a href="builds.html">Corn Builds</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="nav-active">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
