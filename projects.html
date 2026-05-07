@@ -10,16 +10,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-page="projects">
-  <!-- Page transition overlay -->
   <div class="page-transition" id="pageTransition"></div>
-
-  <!-- Mobile nav overlay -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-
   <button class="hamburger" id="hamburger" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
-
 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
@@ -47,10 +42,89 @@
         What we've built.
       </h1>
       <p class="reveal" style="color:var(--text-dim);font-size:0.95rem;line-height:1.75;max-width:480px;margin-top:1rem;">
-        This page is coming soon. Check back for a full breakdown of every Corn Studios project, with details, screenshots, and download links.
+        Free, open source Windows tools built to make your machine faster, cleaner, and more yours. All projects are MIT licensed and available on GitHub.
       </p>
-      <div style="margin-top:2.5rem;" class="reveal">
+      <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;" class="reveal">
+        <a href="https://github.com/Corn-Studios" class="btn btn-primary" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View All on GitHub
+        </a>
         <a href="index.html" class="btn btn-ghost">← Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT CARDS -->
+  <section style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);">
+    <p class="section-label reveal">All Projects</p>
+    <h2 class="section-title reveal">The full catalogue.</h2>
+    <div class="projects-grid" style="margin-top:3rem;">
+
+      <a href="https://github.com/Corn-Studios/win11op" class="project-card reveal" target="_blank">
+        <p class="project-num">PROJECT_001</p>
+        <h3 class="project-name">Win11 Optimizer</h3>
+        <p class="project-desc">A powerful Windows 11 optimization and debloat utility. Remove telemetry, disable unnecessary services, and take back control of your OS. Now on its 3rd update.</p>
+        <div class="project-tags">
+          <span class="tag">C#</span>
+          <span class="tag">.NET 8</span>
+          <span class="tag">WinForms</span>
+          <span class="tag">Windows 11</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </a>
+
+      <a href="https://github.com/Corn-Studios/CornDownloader" class="project-card reveal" target="_blank">
+        <p class="project-num">PROJECT_002</p>
+        <h3 class="project-name">CornDownloader</h3>
+        <p class="project-desc">Zero-dependency app downloader with 60+ curated tools across 7 categories. Installs via winget with a direct URL fallback — the perfect companion to Win11 Optimizer for a fresh Windows setup.</p>
+        <div class="project-tags">
+          <span class="tag">C#</span>
+          <span class="tag">.NET 8</span>
+          <span class="tag">winget</span>
+          <span class="tag">WinForms</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </a>
+
+      <a href="https://github.com/Corn-Studios/CornTools" class="project-card reveal" target="_blank">
+        <p class="project-num">PROJECT_003</p>
+        <h3 class="project-name">CornTools</h3>
+        <p class="project-desc">A unified hub that combines all Corn Studios utilities into one place. Launch, run, and manage every tool without hunting down separate executables. Currently in development.</p>
+        <div class="project-tags">
+          <span class="tag">C#</span>
+          <span class="tag">.NET 8</span>
+          <span class="tag">WinForms</span>
+          <span class="tag">In Dev</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </a>
+
+      <a href="https://github.com/Corn-Studios/CornWatch" class="project-card reveal" target="_blank">
+        <p class="project-num">PROJECT_004</p>
+        <h3 class="project-name">CornWatch</h3>
+        <p class="project-desc">Keeping an eye on your kernel — a lightweight system health dashboard for Windows. Monitor CPU, RAM, and system vitals at a glance without the bloat of heavy monitoring suites.</p>
+        <div class="project-tags">
+          <span class="tag">C#</span>
+          <span class="tag">.NET 8</span>
+          <span class="tag">WinForms</span>
+          <span class="tag">In Dev</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--surface);border-top:1px solid var(--border);text-align:center;">
+    <div style="max-width:560px;margin:0 auto;">
+      <h2 class="section-title reveal">All free. All open source.</h2>
+      <p class="reveal" style="color:var(--text-dim);font-size:0.95rem;line-height:1.75;margin:1.5rem 0 2.5rem;">
+        Every Corn Studios project is MIT licensed and built in the open. Star on GitHub, open an issue, or just download and use them.
+      </p>
+      <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://github.com/Corn-Studios" class="btn btn-primary" target="_blank">⭐ Star on GitHub</a>
+        <a href="https://ko-fi.com/cornstudiosdev" class="btn btn-ghost" target="_blank">💛 Support on Ko-fi</a>
       </div>
     </div>
   </section>
