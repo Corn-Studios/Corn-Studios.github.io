@@ -1,0 +1,34 @@
+/* ─── GITHUB STAR WIDGET ────────────────────────────────────── */
+.star-widget {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--surface2);
+  transition: border-color 0.2s, color 0.2s;
+}
+.star-widget svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.star-count {
+  min-width: 1.5ch;
+  display: inline-block;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+.star-count.loaded { color: var(--accent); }
+
+/* Project card hover makes widget glow too */
+.project-card:hover .star-widget {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.project-card:hover .star-widget svg { opacity: 1; }

@@ -7,19 +7,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/index.css" />
 </head>
 <body data-page="index">
-  <!-- Page transition overlay -->
   <div class="page-transition" id="pageTransition"></div>
-
-  <!-- Mobile nav overlay -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
   <button class="hamburger" id="hamburger" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
-
 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
@@ -37,17 +37,13 @@
   <!-- ── HERO ── -->
   <section class="hero">
     <div class="hero-stars" id="heroStars"></div>
-
     <div class="hero-moon">🌙</div>
-
     <div class="hero-meteors">
       <span class="meteor-emoji" style="animation-delay:0s">☄️</span>
       <span class="meteor-emoji" style="animation-delay:0.4s;font-size:1.6rem">☄️</span>
       <span class="meteor-emoji" style="animation-delay:0.8s;font-size:2.6rem">☄️</span>
     </div>
-
     <div class="hero-corn">🌽</div>
-
     <div class="hero-content">
       <p class="hero-eyebrow">// Open Source Software Studio</p>
       <h1 class="hero-title">
@@ -68,7 +64,6 @@
         <a href="https://www.fiverr.com/connorcorn07?public_mode=true" class="btn btn-ghost" target="_blank">Hire on Fiverr →</a>
       </div>
     </div>
-
     <div class="hero-scroll">
       <div class="scroll-line"></div>
       Scroll to explore
@@ -88,7 +83,6 @@
       <span class="ticker-item"><span class="t-meteor">🌽</span> Corn Builds</span>
       <span class="ticker-item"><span class="t-icon">✦</span> PC Consulting</span>
       <span class="ticker-item"><span class="t-icon">✦</span> Community Supported</span>
-      <!-- duplicate for seamless loop -->
       <span class="ticker-item"><span class="t-icon">✦</span> Open Source</span>
       <span class="ticker-item"><span class="t-icon">✦</span> C# / .NET 8</span>
       <span class="ticker-item"><span class="t-icon">✦</span> Windows Tools</span>
@@ -107,42 +101,57 @@
     <p class="section-label reveal">01 — Projects</p>
     <h2 class="section-title reveal">What we've built.</h2>
     <div class="projects-grid">
-      <a href="https://github.com/Corn-Studios/win11op" class="project-card reveal" target="_blank">
+      <a href="https://github.com/Corn-Studios/win11op" class="project-card reveal" target="_blank" data-repo="win11op">
         <p class="project-num">PROJECT_001</p>
         <h3 class="project-name">Win11 Optimizer</h3>
         <p class="project-desc">A powerful Windows 11 optimization and debloat utility. Remove telemetry, disable unnecessary services, and take back control of your OS. Now on its 3rd update.</p>
         <div class="project-tags">
-          <span class="tag">C#</span>
-          <span class="tag">.NET 8</span>
-          <span class="tag">WinForms</span>
-          <span class="tag">Windows 11</span>
+          <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">WinForms</span><span class="tag">Windows 11</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:0.75rem;">
+          <span class="star-widget">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">–</span>
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--muted);">v3.0.0</span>
         </div>
         <span class="project-arrow">↗</span>
       </a>
-      <a href="https://github.com/Corn-Studios/CornDownloader" class="project-card reveal" target="_blank">
+      <a href="https://github.com/Corn-Studios/CornDownloader" class="project-card reveal" target="_blank" data-repo="CornDownloader">
         <p class="project-num">PROJECT_002</p>
         <h3 class="project-name">CornDownloader</h3>
         <p class="project-desc">Automated utility downloader using winget and direct downloads. The perfect companion to Win11 Optimizer for setting up a fresh Windows install fast.</p>
         <div class="project-tags">
-          <span class="tag">C#</span>
-          <span class="tag">.NET 8</span>
-          <span class="tag">winget</span>
-          <span class="tag">WinForms</span>
+          <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">winget</span><span class="tag">WinForms</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:0.75rem;">
+          <span class="star-widget">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">–</span>
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--muted);">v1.2.0</span>
         </div>
         <span class="project-arrow">↗</span>
       </a>
-      <a href="https://github.com/Corn-Studios/CornTools" class="project-card reveal" target="_blank">
+      <a href="https://github.com/Corn-Studios/CornTools" class="project-card reveal" target="_blank" data-repo="CornTools">
         <p class="project-num">PROJECT_003</p>
         <h3 class="project-name">CornTools</h3>
         <p class="project-desc">A unified hub that combines all Corn Studios utilities into one place. Launch, run, and manage every tool without hunting down separate executables.</p>
         <div class="project-tags">
-          <span class="tag">C#</span>
-          <span class="tag">.NET 8</span>
-          <span class="tag">WinForms</span>
-          <span class="tag">In Dev</span>
+          <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">WinForms</span><span class="tag">In Dev</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:0.75rem;">
+          <span class="star-widget">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">–</span>
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--muted);">v0.1.0 — In Dev</span>
         </div>
         <span class="project-arrow">↗</span>
       </a>
+    </div>
+    <div style="margin-top:2.5rem;" class="reveal">
+      <a href="projects.html" class="btn btn-ghost">View All Projects →</a>
     </div>
   </section>
 
@@ -275,6 +284,9 @@
     <span class="footer-copy">© 2025 Corn Studios — Dutchess County, NY</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="javascript/cursor.js"></script>
+  <script src="javascript/nav.js"></script>
+  <script src="javascript/transitions.js"></script>
+  <script src="javascript/github-stars.js"></script>
 </body>
 </html>

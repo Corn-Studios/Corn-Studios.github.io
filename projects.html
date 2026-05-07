@@ -7,7 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/projects.css" />
+  <link rel="stylesheet" href="css/pages/changelog.css" />
 </head>
 <body data-page="projects">
   <div class="page-transition" id="pageTransition"></div>
@@ -15,7 +20,6 @@
   <button class="hamburger" id="hamburger" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
-
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
@@ -54,60 +58,76 @@
     </div>
   </section>
 
-  <!-- PROJECT CARDS -->
+  <!-- PROJECT CARDS with star widgets -->
   <section style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);">
     <p class="section-label reveal">All Projects</p>
     <h2 class="section-title reveal">The full catalogue.</h2>
     <div class="projects-grid" style="margin-top:3rem;">
 
-      <a href="https://github.com/Corn-Studios/win11op" class="project-card reveal" target="_blank">
+      <a href="https://github.com/Corn-Studios/win11op" class="project-card reveal" target="_blank" data-repo="win11op">
         <p class="project-num">PROJECT_001</p>
         <h3 class="project-name">Win11 Optimizer</h3>
         <p class="project-desc">A powerful Windows 11 optimization and debloat utility. Remove telemetry, disable unnecessary services, and take back control of your OS. Now on its 3rd update.</p>
         <div class="project-tags">
-          <span class="tag">C#</span>
-          <span class="tag">.NET 8</span>
-          <span class="tag">WinForms</span>
-          <span class="tag">Windows 11</span>
+          <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">WinForms</span><span class="tag">Windows 11</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:0.75rem;">
+          <span class="star-widget">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">–</span>
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--muted);">v3.0.0 — Latest</span>
         </div>
         <span class="project-arrow">↗</span>
       </a>
 
-      <a href="https://github.com/Corn-Studios/CornDownloader" class="project-card reveal" target="_blank">
+      <a href="https://github.com/Corn-Studios/CornDownloader" class="project-card reveal" target="_blank" data-repo="CornDownloader">
         <p class="project-num">PROJECT_002</p>
         <h3 class="project-name">CornDownloader</h3>
         <p class="project-desc">Zero-dependency app downloader with 60+ curated tools across 7 categories. Installs via winget with a direct URL fallback — the perfect companion to Win11 Optimizer for a fresh Windows setup.</p>
         <div class="project-tags">
-          <span class="tag">C#</span>
-          <span class="tag">.NET 8</span>
-          <span class="tag">winget</span>
-          <span class="tag">WinForms</span>
+          <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">winget</span><span class="tag">WinForms</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:0.75rem;">
+          <span class="star-widget">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">–</span>
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--muted);">v1.2.0 — Latest</span>
         </div>
         <span class="project-arrow">↗</span>
       </a>
 
-      <a href="https://github.com/Corn-Studios/CornTools" class="project-card reveal" target="_blank">
+      <a href="https://github.com/Corn-Studios/CornTools" class="project-card reveal" target="_blank" data-repo="CornTools">
         <p class="project-num">PROJECT_003</p>
         <h3 class="project-name">CornTools</h3>
         <p class="project-desc">A unified hub that combines all Corn Studios utilities into one place. Launch, run, and manage every tool without hunting down separate executables. Currently in development.</p>
         <div class="project-tags">
-          <span class="tag">C#</span>
-          <span class="tag">.NET 8</span>
-          <span class="tag">WinForms</span>
-          <span class="tag">In Dev</span>
+          <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">WinForms</span><span class="tag">In Dev</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:0.75rem;">
+          <span class="star-widget">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">–</span>
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--muted);">v0.1.0 — In Dev</span>
         </div>
         <span class="project-arrow">↗</span>
       </a>
 
-      <a href="https://github.com/Corn-Studios/CornWatch" class="project-card reveal" target="_blank">
+      <a href="https://github.com/Corn-Studios/CornWatch" class="project-card reveal" target="_blank" data-repo="CornWatch">
         <p class="project-num">PROJECT_004</p>
         <h3 class="project-name">CornWatch</h3>
         <p class="project-desc">Keeping an eye on your kernel — a lightweight system health dashboard for Windows. Monitor CPU, RAM, and system vitals at a glance without the bloat of heavy monitoring suites.</p>
         <div class="project-tags">
-          <span class="tag">C#</span>
-          <span class="tag">.NET 8</span>
-          <span class="tag">WinForms</span>
-          <span class="tag">In Dev</span>
+          <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">WinForms</span><span class="tag">In Dev</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:0.75rem;">
+          <span class="star-widget">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="star-count">–</span>
+          </span>
+          <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--muted);">v0.1.0 — In Dev</span>
         </div>
         <span class="project-arrow">↗</span>
       </a>
@@ -115,8 +135,46 @@
     </div>
   </section>
 
+  <!-- CHANGELOG TEASER -->
+  <section style="background:var(--surface);border-top:1px solid var(--border);">
+    <p class="section-label reveal">Recent Updates</p>
+    <h2 class="section-title reveal">What's changed lately.</h2>
+    <p class="reveal" style="color:var(--text-dim);font-size:0.9rem;line-height:1.75;max-width:500px;margin-top:0.5rem;">
+      Latest releases across all projects — full history on the changelog page.
+    </p>
+    <div class="changelog-teaser-grid">
+      <a href="changelog.html" class="changelog-teaser-card reveal" style="text-decoration:none;color:inherit;">
+        <p class="changelog-teaser-project">🪟 Win11 Optimizer</p>
+        <p class="changelog-teaser-version">v3.0.0 — Major Release</p>
+        <p class="changelog-teaser-note">Preset system, rebuilt UI, expanded telemetry removal, per-tweak rollback.</p>
+        <p class="changelog-teaser-date">2025 — Update 3</p>
+      </a>
+      <a href="changelog.html" class="changelog-teaser-card reveal" style="text-decoration:none;color:inherit;">
+        <p class="changelog-teaser-project">📦 CornDownloader</p>
+        <p class="changelog-teaser-version">v1.2.0 — Minor Release</p>
+        <p class="changelog-teaser-note">60+ tools, 7 categories, direct URL fallback for tools not on winget.</p>
+        <p class="changelog-teaser-date">2025</p>
+      </a>
+      <a href="changelog.html" class="changelog-teaser-card reveal" style="text-decoration:none;color:inherit;">
+        <p class="changelog-teaser-project">🛠️ CornTools</p>
+        <p class="changelog-teaser-version">v0.1.0 — Dev Build</p>
+        <p class="changelog-teaser-note">Unified launcher detects and launches Win11 Optimizer and CornDownloader.</p>
+        <p class="changelog-teaser-date">2025 — In Progress</p>
+      </a>
+      <a href="changelog.html" class="changelog-teaser-card reveal" style="text-decoration:none;color:inherit;">
+        <p class="changelog-teaser-project">📊 CornWatch</p>
+        <p class="changelog-teaser-version">v0.1.0 — Dev Build</p>
+        <p class="changelog-teaser-note">Live CPU and RAM monitoring live. Disk and network panels coming next.</p>
+        <p class="changelog-teaser-date">2025 — In Progress</p>
+      </a>
+    </div>
+    <div style="margin-top:2.5rem;" class="reveal">
+      <a href="changelog.html" class="btn btn-primary">Full Changelog →</a>
+    </div>
+  </section>
+
   <!-- CTA -->
-  <section style="background:var(--surface);border-top:1px solid var(--border);text-align:center;">
+  <section style="background:var(--bg2);border-top:1px solid var(--border);text-align:center;">
     <div style="max-width:560px;margin:0 auto;">
       <h2 class="section-title reveal">All free. All open source.</h2>
       <p class="reveal" style="color:var(--text-dim);font-size:0.95rem;line-height:1.75;margin:1.5rem 0 2.5rem;">
@@ -139,6 +197,9 @@
     <span class="footer-copy">© 2025 Corn Studios — Dutchess County, NY</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="javascript/cursor.js"></script>
+  <script src="javascript/nav.js"></script>
+  <script src="javascript/transitions.js"></script>
+  <script src="javascript/github-stars.js"></script>
 </body>
 </html>

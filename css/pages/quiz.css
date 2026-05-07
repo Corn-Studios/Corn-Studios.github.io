@@ -1,0 +1,194 @@
+/* ─── QUIZ WRAPPER ──────────────────────────────────────────── */
+.quiz-wrap {
+  max-width: 680px;
+  margin: 3rem auto 0;
+}
+
+/* ─── STEPS ─────────────────────────────────────────────────── */
+.quiz-step {
+  display: none;
+  animation: fadeUp 0.4s ease forwards;
+}
+.quiz-step.active { display: block; }
+
+.quiz-question {
+  font-family: var(--font-display);
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.quiz-sub {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+  line-height: 1.65;
+}
+
+/* ─── OPTION BUTTONS ────────────────────────────────────────── */
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: none;
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.quiz-option::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(245,200,66,0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.quiz-option:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+  transform: translateX(4px);
+  cursor: pointer;
+}
+.quiz-option:hover::before { opacity: 1; }
+
+.quiz-option-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.quiz-option-label {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+.quiz-option-desc {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  display: block;
+}
+
+/* ─── PROGRESS BAR ──────────────────────────────────────────── */
+.quiz-progress {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+.quiz-progress-dot {
+  height: 3px;
+  flex: 1;
+  background: var(--border2);
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+.quiz-progress-dot.done { background: var(--accent); }
+.quiz-progress-dot.active { background: var(--sky-purple); }
+
+/* ─── RESULT CARD ───────────────────────────────────────────── */
+.quiz-result {
+  display: none;
+  animation: fadeUp 0.5s ease forwards;
+}
+.quiz-result.active { display: block; }
+
+.quiz-result-card {
+  background: var(--card);
+  border: 1px solid var(--accent);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.quiz-result-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(245,200,66,0.06), transparent 60%);
+  pointer-events: none;
+}
+
+.quiz-result-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.quiz-result-tier {
+  font-family: var(--font-display);
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+.quiz-result-desc {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.quiz-result-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+.quiz-result-perks li {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.quiz-result-perks li::before {
+  content: '✦';
+  color: var(--accent);
+  font-size: 0.5rem;
+  flex-shrink: 0;
+}
+
+.quiz-result-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.quiz-restart {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+  padding: 0;
+}
+.quiz-restart:hover { color: var(--accent); cursor: pointer; }
+
+/* ─── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .quiz-option { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}

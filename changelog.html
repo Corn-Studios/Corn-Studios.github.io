@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog — Corn Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/changelog.css" />
+</head>
+<body data-page="changelog">
+  <div class="page-transition" id="pageTransition"></div>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">CORN_STUDIOS</a>
+    <ul class="nav-links">
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="builds.html">Corn Builds</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="hero-stars" id="heroStars"></div>
+    <div class="hero-moon" style="top:8%;right:8%;font-size:3rem">🌙</div>
+    <div style="position:relative;z-index:4;">
+      <p class="section-label reveal" style="margin-bottom:1.5rem;">05 — Changelog</p>
+      <h1 class="section-title reveal" style="font-size:clamp(1.6rem,4vw,3rem);margin-bottom:1.2rem;">
+        What's changed.
+      </h1>
+      <p class="reveal" style="color:var(--text-dim);font-size:0.95rem;line-height:1.75;max-width:480px;margin-top:1rem;">
+        A full history of every update across all Corn Studios projects. New features, fixes, and improvements — documented as they ship.
+      </p>
+      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;" class="reveal">
+        <a href="https://github.com/Corn-Studios" class="btn btn-primary" target="_blank">View on GitHub →</a>
+        <a href="projects.html" class="btn btn-ghost">← All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANGELOG TIMELINE -->
+  <section style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);">
+    <div class="changelog-wrap">
+
+      <!-- ── WIN11 OPTIMIZER ── -->
+      <div class="changelog-project-group reveal">
+        <p class="changelog-project-title">🪟 Win11 Optimizer</p>
+        <div class="changelog-timeline">
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v3.0.0</span>
+              <span class="changelog-badge major">Major</span>
+              <span class="changelog-date">2025 — Update 3</span>
+            </div>
+            <p class="changelog-title">Third major release — expanded tweaks &amp; new UI</p>
+            <p class="changelog-desc">The biggest update yet. Rebuilt the tweak engine with more granular control, a cleaner UI layout, and a new preset system that lets you apply Safe, Balanced, or Aggressive optimizations in one click.</p>
+            <ul class="changelog-items">
+              <li>New preset system: Safe / Balanced / Aggressive modes</li>
+              <li>Expanded telemetry removal — covers more services</li>
+              <li>Rebuilt UI — cleaner section grouping</li>
+              <li>New: optional dark taskbar and Explorer tweaks</li>
+              <li>Improved rollback — undo any applied tweak individually</li>
+              <li>Bug fix: admin elevation prompt on first launch</li>
+            </ul>
+          </div>
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v2.0.0</span>
+              <span class="changelog-badge major">Major</span>
+              <span class="changelog-date">2025 — Update 2</span>
+            </div>
+            <p class="changelog-title">Second update — debloat &amp; privacy improvements</p>
+            <p class="changelog-desc">Focused on expanding the debloat options and tightening up the privacy settings category. Added the ability to remove specific preinstalled apps and gave users more control over startup programs.</p>
+            <ul class="changelog-items">
+              <li>New: per-app debloat checkboxes for preinstalled apps</li>
+              <li>Added startup program manager</li>
+              <li>Improved privacy tab — more granular telemetry options</li>
+              <li>Performance improvements to tweak application speed</li>
+              <li>Minor UI polish and label clarity improvements</li>
+            </ul>
+          </div>
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v1.0.0</span>
+              <span class="changelog-badge minor">Initial</span>
+              <span class="changelog-date">2025 — Launch</span>
+            </div>
+            <p class="changelog-title">Initial release</p>
+            <p class="changelog-desc">Started as a personal PowerShell script, rebuilt as a proper WinForms app. Core optimization, debloat, and telemetry removal in one place.</p>
+            <ul class="changelog-items">
+              <li>Core optimization tweaks for Windows 11</li>
+              <li>Basic debloat — removes common preinstalled apps</li>
+              <li>Telemetry and data collection toggle</li>
+              <li>Service manager — disable unnecessary background services</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── CORNDOWNLOADER ── -->
+      <div class="changelog-project-group reveal">
+        <p class="changelog-project-title">📦 CornDownloader</p>
+        <div class="changelog-timeline">
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v1.2.0</span>
+              <span class="changelog-badge minor">Minor</span>
+              <span class="changelog-date">2025</span>
+            </div>
+            <p class="changelog-title">60+ tools, 7 categories, winget fallback</p>
+            <p class="changelog-desc">Expanded the tool library to 60+ curated apps across 7 categories, and added a direct URL fallback for tools that aren't available through winget.</p>
+            <ul class="changelog-items">
+              <li>Expanded to 60+ curated tools</li>
+              <li>Added direct URL download fallback</li>
+              <li>New categories: Media, Security, Development</li>
+              <li>Improved winget error handling and status reporting</li>
+              <li>Batch install — queue multiple tools at once</li>
+            </ul>
+          </div>
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v1.0.0</span>
+              <span class="changelog-badge minor">Initial</span>
+              <span class="changelog-date">2025 — Launch</span>
+            </div>
+            <p class="changelog-title">Initial release — winget-powered app downloader</p>
+            <p class="changelog-desc">The perfect companion to Win11 Optimizer for a fresh Windows setup. Select the apps you want, hit install, walk away.</p>
+            <ul class="changelog-items">
+              <li>winget-based installation for common tools</li>
+              <li>Category browsing — Browsers, Utilities, Dev tools</li>
+              <li>One-click batch install</li>
+              <li>Zero external dependencies</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── CORNTOOLS ── -->
+      <div class="changelog-project-group reveal">
+        <p class="changelog-project-title">🛠️ CornTools <span style="font-size:0.55rem;color:var(--muted);margin-left:0.5rem;">In Development</span></p>
+        <div class="changelog-timeline">
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v0.1.0</span>
+              <span class="changelog-badge patch">Dev Build</span>
+              <span class="changelog-date">2025 — In Progress</span>
+            </div>
+            <p class="changelog-title">Initial dev build — unified launcher scaffolding</p>
+            <p class="changelog-desc">Early development build. Core launcher UI is in place. Can detect and launch Win11 Optimizer and CornDownloader if present. More integrations coming.</p>
+            <ul class="changelog-items">
+              <li>Unified launcher shell — detects installed Corn tools</li>
+              <li>Launches Win11 Optimizer and CornDownloader</li>
+              <li>Update checker scaffold (not yet live)</li>
+              <li>Basic settings persistence</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── CORNWATCH ── -->
+      <div class="changelog-project-group reveal">
+        <p class="changelog-project-title">📊 CornWatch <span style="font-size:0.55rem;color:var(--muted);margin-left:0.5rem;">In Development</span></p>
+        <div class="changelog-timeline">
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="changelog-version">v0.1.0</span>
+              <span class="changelog-badge patch">Dev Build</span>
+              <span class="changelog-date">2025 — In Progress</span>
+            </div>
+            <p class="changelog-title">Initial dev build — system health dashboard</p>
+            <p class="changelog-desc">Early scaffold for the system monitoring dashboard. CPU and RAM readouts are live. Disk and network panels are next on the list.</p>
+            <ul class="changelog-items">
+              <li>Live CPU usage and temperature readout</li>
+              <li>RAM usage and available memory display</li>
+              <li>Lightweight — minimal background resource use</li>
+              <li>Disk and network monitoring coming next</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--surface);border-top:1px solid var(--border);text-align:center;">
+    <div style="max-width:560px;margin:0 auto;">
+      <h2 class="section-title reveal">Always improving.</h2>
+      <p class="reveal" style="color:var(--text-dim);font-size:0.95rem;line-height:1.75;margin:1.5rem 0 2.5rem;">
+        All projects are open source and actively maintained. Got a feature request or found a bug? Open an issue on GitHub.
+      </p>
+      <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://github.com/Corn-Studios" class="btn btn-primary" target="_blank">⭐ Star on GitHub</a>
+        <a href="contact.html" class="btn btn-ghost">Send Feedback</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">CORN_STUDIOS</span>
+    <div class="footer-links">
+      <a href="https://github.com/Corn-Studios" target="_blank">GitHub</a>
+      <a href="https://instagram.com/cornstudiosdev" target="_blank">Instagram</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <span class="footer-copy">© 2025 Corn Studios — Dutchess County, NY</span>
+  </footer>
+
+  <script src="javascript/cursor.js"></script>
+  <script src="javascript/nav.js"></script>
+  <script src="javascript/transitions.js"></script>
+</body>
+</html>

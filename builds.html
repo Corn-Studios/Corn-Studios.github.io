@@ -7,19 +7,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pages/builds.css" />
+  <link rel="stylesheet" href="css/pages/quiz.css" />
 </head>
 <body data-page="builds">
-  <!-- Page transition overlay -->
   <div class="page-transition" id="pageTransition"></div>
-
-  <!-- Mobile nav overlay -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
   <button class="hamburger" id="hamburger" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
-
 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
@@ -132,8 +132,25 @@
     </div>
   </section>
 
+  <!-- WHAT TO PICK QUIZ -->
+  <section style="background:linear-gradient(160deg,var(--bg2) 0%,#1a1040 60%,var(--bg) 100%);">
+    <p class="section-label reveal">Not sure which tier?</p>
+    <h2 class="section-title reveal">Let us figure it out.</h2>
+    <p class="reveal" style="color:var(--text-dim);font-size:0.95rem;line-height:1.75;max-width:520px;margin-top:0.5rem;">
+      Answer three quick questions and we'll point you to the right service.
+    </p>
+    <div class="quiz-wrap reveal" id="quizContainer">
+      <!-- Populated by quiz.js -->
+      <noscript>
+        <p style="color:var(--text-dim);font-size:0.9rem;margin-top:2rem;">
+          Enable JavaScript to use the interactive quiz, or just <a href="contact.html" style="color:var(--accent)">get in touch</a> and we'll figure it out together.
+        </p>
+      </noscript>
+    </div>
+  </section>
+
   <!-- CTA -->
-  <section style="text-align:center;background:linear-gradient(160deg,var(--bg2) 0%,#1a1040 50%,var(--bg) 100%);">
+  <section style="text-align:center;background:var(--surface);border-top:1px solid var(--border);">
     <div style="max-width:600px;margin:0 auto;">
       <p class="section-label reveal" style="justify-content:center;">
         <span style="font-size:1.5rem">🌽</span>
@@ -159,6 +176,9 @@
     <span class="footer-copy">© 2025 Corn Studios — Dutchess County, NY</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="javascript/cursor.js"></script>
+  <script src="javascript/nav.js"></script>
+  <script src="javascript/transitions.js"></script>
+  <script src="javascript/quiz.js"></script>
 </body>
 </html>
