@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Corn Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <style>
+    .error-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 18vw, 10rem);
+      color: var(--accent);
+      text-shadow:
+        0 0 40px rgba(245,200,66,0.4),
+        0 0 80px rgba(245,200,66,0.15);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      animation: glitch 4s infinite;
+      position: relative;
+    }
+
+    .error-code::before,
+    .error-code::after {
+      content: '404';
+      position: absolute;
+      inset: 0;
+      font-family: var(--font-display);
+      font-size: inherit;
+    }
+    .error-code::before {
+      color: var(--meteor);
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+      transform: translateX(-3px);
+      animation: glitch-top 4s infinite;
+      opacity: 0.7;
+    }
+    .error-code::after {
+      color: var(--sky-purple);
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      transform: translateX(3px);
+      animation: glitch-bot 4s infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes glitch {
+      0%, 90%, 100% { transform: translate(0); }
+      91% { transform: translate(-2px, 1px); }
+      93% { transform: translate(2px, -1px); }
+      95% { transform: translate(-1px, 2px); }
+      97% { transform: translate(1px, -2px); }
+    }
+    @keyframes glitch-top {
+      0%, 90%, 100% { transform: translateX(-3px); opacity: 0; }
+      91%, 97% { transform: translateX(-5px); opacity: 0.7; }
+      93%, 95% { transform: translateX(2px); opacity: 0.7; }
+    }
+    @keyframes glitch-bot {
+      0%, 90%, 100% { transform: translateX(3px); opacity: 0; }
+      91%, 97% { transform: translateX(5px); opacity: 0.7; }
+      93%, 95% { transform: translateX(-2px); opacity: 0.7; }
+    }
+
+    .error-corn {
+      font-size: 3.5rem;
+      margin: 1.5rem 0 1rem;
+      animation: float 3s ease-in-out infinite;
+      display: block;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .error-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .error-title {
+      font-family: var(--font-body);
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .error-desc {
+      font-family: var(--font-body);
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      max-width: 400px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* reuse btn styles from base */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #080812;
+    }
+    .btn-primary:hover {
+      background: #ffe566;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(245,200,66,0.3);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border2);
+    }
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* floating stars specific to this page */
+    .stars-404 {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .star-dot {
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+      opacity: 0;
+      animation: twinkle var(--dur) ease-in-out infinite var(--delay);
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: var(--bright); transform: scale(1); }
+    }
+
+    /* drifting meteors */
+    .meteor-404 {
+      position: fixed;
+      font-size: var(--sz);
+      opacity: 0;
+      animation: drift var(--dur) ease-in infinite var(--delay);
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes drift {
+      0% { opacity: 0; transform: translate(0, 0) rotate(-20deg); }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.6; }
+      100% { opacity: 0; transform: translate(-200px, 300px) rotate(-20deg); }
+    }
+  </style>
+</head>
+<body data-page="404">
+  <div class="page-transition" id="pageTransition"></div>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">CORN_STUDIOS</a>
+    <ul class="nav-links">
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="builds.html">Corn Builds</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="stars-404" id="stars404"></div>
+
+  <div class="error-wrap">
+    <p class="error-label">ERROR — PAGE NOT FOUND</p>
+    <div class="error-code">404</div>
+    <span class="error-corn">🌽</span>
+    <h1 class="error-title">Lost in the cornfield.</h1>
+    <p class="error-desc">
+      This page got debloated a little too hard. It doesn't exist,
+      never existed, or got moved somewhere else.
+    </p>
+    <div class="error-actions">
+      <a href="index.html" class="btn btn-primary">← Back to Home</a>
+      <a href="projects.html" class="btn btn-ghost">View Projects</a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">CORN_STUDIOS</span>
+    <div class="footer-links">
+      <a href="https://github.com/Corn-Studios" target="_blank">GitHub</a>
+      <a href="https://instagram.com/cornstudiosdev" target="_blank">Instagram</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <span class="footer-copy" id="footer-year">© <script>document.currentScript.parentElement.innerHTML="© "+new Date().getFullYear()+" Corn Studios — Dutchess County, NY";</script> Corn Studios — Dutchess County, NY</span>
+  </footer>
+
+  <script src="javascript/cursor.js"></script>
+  <script src="javascript/nav.js"></script>
+  <script src="javascript/transitions.js"></script>
+  <script>
+    // Generate twinkling stars
+    const container = document.getElementById('stars404');
+    for (let i = 0; i < 60; i++) {
+      const s = document.createElement('div');
+      s.className = 'star-dot';
+      const size = Math.random() * 2 + 1;
+      s.style.cssText = `
+        width:${size}px; height:${size}px;
+        left:${Math.random()*100}%;
+        top:${Math.random()*100}%;
+        --dur:${2 + Math.random()*4}s;
+        --delay:${Math.random()*5}s;
+        --bright:${0.3 + Math.random()*0.7};
+      `;
+      container.appendChild(s);
+    }
+
+    // Occasional drifting meteors
+    const meteors = ['☄️'];
+    for (let i = 0; i < 4; i++) {
+      const m = document.createElement('div');
+      m.className = 'meteor-404';
+      m.textContent = '☄️';
+      m.style.cssText = `
+        left:${60 + Math.random()*40}%;
+        top:${Math.random()*40}%;
+        --sz:${1 + Math.random()*1.5}rem;
+        --dur:${6 + Math.random()*8}s;
+        --delay:${Math.random()*10}s;
+      `;
+      document.body.appendChild(m);
+    }
+  </script>
+</body>
+</html>
