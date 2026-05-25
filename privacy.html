@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Corn Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <style>
+    .privacy-hero {
+      padding: 10rem 3rem 5rem;
+      max-width: 780px;
+      position: relative;
+      z-index: 2;
+    }
+    .privacy-body {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 5rem 3rem;
+    }
+    .privacy-inner {
+      max-width: 720px;
+    }
+    .privacy-section {
+      margin-bottom: 3rem;
+    }
+    .privacy-section-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .privacy-section h2 {
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .privacy-section p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.85;
+      margin-bottom: 0.75rem;
+    }
+    .privacy-section p:last-child { margin-bottom: 0; }
+    .privacy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0;
+    }
+    .privacy-section ul li {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .privacy-section ul li::before {
+      content: '→';
+      color: var(--accent);
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+    .privacy-section ul li:last-child { border-bottom: none; }
+    .privacy-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+    .privacy-contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin-top: 1rem;
+    }
+    .privacy-contact-box p {
+      margin-bottom: 0.4rem !important;
+    }
+    .privacy-contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+    .privacy-contact-box a:hover { text-decoration: underline; }
+    .effective-date {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .privacy-hero { padding: 8rem 1.5rem 3rem; }
+      .privacy-body { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body data-page="privacy">
+  <div class="page-transition" id="pageTransition"></div>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">CORN_STUDIOS</a>
+    <ul class="nav-links">
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="builds.html">Corn Builds</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="privacy-hero">
+    <p class="section-label reveal" style="margin-bottom:1.5rem;">Legal</p>
+    <h1 class="section-title reveal" style="font-size:clamp(1.4rem,3.5vw,2.6rem);margin-bottom:1rem;">
+      Privacy Policy
+    </h1>
+    <p class="effective-date reveal">Effective date: May 25, 2026</p>
+  </section>
+
+  <!-- BODY -->
+  <section class="privacy-body">
+    <div class="privacy-inner">
+
+      <div class="privacy-section reveal">
+        <p class="privacy-section-label">Overview</p>
+        <p>Corn Studios is committed to protecting your privacy. This policy explains what information we collect through our website, how we use it, and your rights regarding that information.</p>
+        <p>Our desktop applications — including Win11 Optimizer, CornDownloader, CornTools, CornWatch, and any related tools — do not collect, transmit, or store any personal data whatsoever.</p>
+      </div>
+
+      <hr class="privacy-divider" />
+
+      <div class="privacy-section reveal">
+        <p class="privacy-section-label">What we collect</p>
+        <h2>Contact form data only.</h2>
+        <p>When you submit a message through the contact form on our website, we collect the following information:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Your email address</li>
+          <li>The contents of your message</li>
+        </ul>
+        <p style="margin-top:1rem;">We do not use cookies, analytics, tracking scripts, or any other data collection mechanisms on our website.</p>
+      </div>
+
+      <hr class="privacy-divider" />
+
+      <div class="privacy-section reveal">
+        <p class="privacy-section-label">How we use it</p>
+        <h2>Only to respond to you.</h2>
+        <p>We use the information you submit solely to respond to your inquiry. We will never sell, share, rent, or disclose your information to any third party for any reason.</p>
+        <p>Contact form submissions are processed and stored by <a href="https://formspree.io/legal/privacy-policy/" target="_blank" style="color:var(--accent);text-decoration:none;font-family:var(--font-mono);font-size:0.88rem;">Formspree</a>, our form handling provider. You can review Formspree's privacy policy on their website.</p>
+      </div>
+
+      <hr class="privacy-divider" />
+
+      <div class="privacy-section reveal">
+        <p class="privacy-section-label">Retention</p>
+        <h2>Only as long as needed.</h2>
+        <p>We retain contact form submissions only as long as needed to respond to and resolve your inquiry. After that, messages may be deleted at our discretion.</p>
+      </div>
+
+      <hr class="privacy-divider" />
+
+      <div class="privacy-section reveal">
+        <p class="privacy-section-label">Your rights</p>
+        <h2>You can request deletion.</h2>
+        <p>You have the right to request that we delete any personal information you have submitted to us. To make a request, email us at the address below and we will process it promptly.</p>
+        <div class="privacy-contact-box">
+          <p style="font-family:var(--font-mono);font-size:0.7rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem !important;">Privacy requests</p>
+          <a href="mailto:cornstudiosdev@gmail.com">cornstudiosdev@gmail.com</a>
+        </div>
+      </div>
+
+      <hr class="privacy-divider" />
+
+      <div class="privacy-section reveal">
+        <p class="privacy-section-label">Changes</p>
+        <h2>We'll keep this up to date.</h2>
+        <p>We may update this policy from time to time. Any changes will be reflected on this page with an updated effective date.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="javascript/cursor.js"></script>
+  <script src="javascript/nav.js"></script>
+  <script src="javascript/transitions.js"></script>
+  <script src="javascript/footer.js"></script>
+</body>
+</html>
