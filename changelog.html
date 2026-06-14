@@ -63,11 +63,27 @@
 
           <div class="changelog-entry">
             <div class="changelog-meta">
+              <span class="changelog-version">v1.2.0</span>
+              <span class="changelog-badge minor">Minor</span>
+              <span class="changelog-date">May 23, 2026</span>
+            </div>
+            <p class="changelog-title">Latest release — .NET 10 migration &amp; full DPI awareness</p>
+            <p class="changelog-desc">Modernizes the build under the hood and fixes scaling problems on high-DPI displays, alongside a refreshed set of tweaks.</p>
+            <ul class="changelog-items">
+              <li>Migrated the project to .NET 10 (net10.0-windows)</li>
+              <li>Added full PerMonitorV2 DPI awareness via a new app manifest and DPI helper class</li>
+              <li>Fixed blurry text and misaligned preset labels on high-DPI displays</li>
+              <li>Expanded the Tweak Engine with new tweaks and removed ones that no longer worked</li>
+            </ul>
+          </div>
+
+          <div class="changelog-entry">
+            <div class="changelog-meta">
               <span class="changelog-version">v1.1.0</span>
               <span class="changelog-badge minor">Minor</span>
               <span class="changelog-date">May 10, 2026</span>
             </div>
-            <p class="changelog-title">Latest release — refinements &amp; stability improvements</p>
+            <p class="changelog-title">Refinements &amp; stability improvements</p>
             <p class="changelog-desc">The most polished build yet. Focused on stability, edge-case fixes, and quality-of-life improvements following feedback from v1.0.1.</p>
             <ul class="changelog-items">
               <li>Stability improvements across core tweak engine</li>
